@@ -16,6 +16,7 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="style.css" />
+    <script src="./js/request.js"></script>
   </head>
   <body>
     <header>
@@ -24,7 +25,7 @@
         data-bs-theme="dark"
       >
         <div class="container-fluid">
-          <a class="navbar-brand" href="#"
+          <a class="navbar-brand" href="#" onclick="request('home')"
             ><img src="./assets/img/logo.png"
           /></a>
           <button
@@ -40,31 +41,31 @@
           </button>
           <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav mx-auto align-self-end">
-              <a class="nav-link me-4" href="#home">Inicio</a>
-              <a class="nav-link me-4" href="#sobre">Sobre</a>
-              <a class="nav-link me-4" href="#vantagens">Vantagens</a>
-              <a class="nav-link contato-link" href="#contato">Contato</a>
+              <a class="nav-link me-4" href="#home" onclick="request('home')"
+                >Inicio</a
+              >
+              <a class="nav-link me-4" href="#sobre" onclick="request('about')"
+                >Sobre</a
+              >
+              <a
+                class="nav-link me-4"
+                href="#vantagens"
+                onclick="request('advantages')"
+                >Vantagens</a
+              >
+              <a
+                class="nav-link contato-link"
+                href="#contato"
+                onclick="request('contact')"
+                >Contato</a
+              >
             </div>
           </div>
         </div>
       </nav>
     </header>
     <main>
-      <section id="home" class="container-fluid content-sections box1">
-        <h1 data-text=" WinTech" class="text-home-animate">
-           WinTech</h1>  
-          <h2>Gestão para fábricas de esquadrias.</h2>
-        </div>
-      </section>
-      <section id="sobre" class="container-fluid content-sections">
-        <h1>SOBRE</h1>
-      </section>
-      <section id="vantagens" class="container-fluid content-sections box2">
-        <h1>VANTAGENS</h1>
-      </section>
-      <section id="contato" class="container-fluid content-sections">
-        <h1>CONTATO</h1>
-      </section>
+      <div id="content"></div>
     </main>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
