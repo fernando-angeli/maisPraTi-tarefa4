@@ -1,0 +1,183 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap");
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+:root {
+  --color-cinza: #2b3035; /* Cinza dark bootstrap*/
+  --color-cinza-escuro: rgb(34, 40, 49); /* Cinza Escuro */
+  --color-cinza-escuro-opaco: rgb(34, 40, 49, 0.8); /* Cinza Escuro Opaco */
+  --color-texto-principal: #000; /* Preto */
+  --color-verde: rgb(10, 248, 152); /* Verde */
+  --color-verde-opaco: rgb(10, 248, 152, 0.4); /* Verde */
+  --color-texto-secundario: #95a5a6; /* Cinza Médio */
+  --color-azul: rgb(32, 178, 255); /* Azul Claro */
+  --color-azul-opaco: rgb(32, 178, 255, 0.4); /* Azul Claro */
+  --color-gradient: linear-gradient(135deg, #0af898, #20b2ff);
+}
+
+header {
+  position: fixed;
+  width: 100vw;
+  z-index: 1;
+}
+
+.contato-link {
+  position: relative;
+  padding: 10px 20px;
+  z-index: 1;
+  text-align: center;
+  width: 8rem;
+}
+
+.contato-link::before {
+  content: "";
+  position: absolute;
+  top: -1.5px;
+  left: -1.5px;
+  right: -1.5px;
+  bottom: -1.5px;
+  z-index: -1;
+  background: linear-gradient(
+    45deg,
+    var(--color-verde),
+    var(--color-azul)
+  ); /* Gradiente verde e azul */
+  border-radius: 4px;
+}
+
+.contato-link::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  background: var(--color-cinza); /* Cor de fundo do navbar */
+  border-radius: 4px;
+}
+
+a.nav-link {
+  color: #fff;
+  font-size: 1.1rem;
+}
+
+@media (max-width: 991px) {
+  .contato-link::before,
+  .contato-link::after {
+    display: none;
+  }
+  .contato-link {
+    padding-left: 0;
+    text-align: start;
+    font-weight: bold;
+    background: none;
+    background: linear-gradient(45deg, var(--color-verde), var(--color-azul));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+  }
+}
+
+a.nav-link:hover {
+  border-bottom: 1.5px solid var(--color-verde);
+}
+
+a.nav-link.contato-link:hover {
+  background: linear-gradient(45deg, var(--color-verde), var(--color-azul));
+  border: none;
+  transition: 400ms linear;
+  z-index: 1;
+}
+
+.section {
+  height: 100vh;
+}
+
+.box1,
+.box2 {
+  position: relative;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+.box1 {
+  background-image: linear-gradient(
+      var(--color-azul-opaco),
+      var(--color-verde-opaco)
+    ),
+    url(assets/img/box1.jpg);
+}
+.box2 {
+  background-image: linear-gradient(
+      var(--color-azul-opaco),
+      var(--color-verde-opaco)
+    ),
+    url(assets/img/box2.jpg);
+}
+
+.content-sections {
+  height: 100vh;
+  padding-top: 100px;
+}
+
+.text-home {
+  font-family: "Poppins", sans-serif;
+}
+
+#home {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#home > h1 {
+  position: relative;
+  font-size: 8rem;
+  color: #fff;
+  margin-right: 10rem;
+  -webkit-text-stroke: 0.2vw var(--color-cinza);
+}
+
+#home > h1::before {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  color: var(--color-cinza-escuro);
+  -webkit-text-stroke: 0.2vw var(--color-cinza-escuro);
+  border-right: 5px solid var(--color-azul);
+  overflow: hidden;
+  animation: animate 5s linear infinite;
+}
+
+@keyframes animate {
+  0%,
+  10%,
+  100% {
+    width: 0;
+  }
+  70%,
+  90% {
+    width: 100%;
+  }
+}
+
+#home > h2 {
+  font-size: 4rem;
+  color: #fff;
+  -webkit-text-stroke: 1px var(--color-cinza);
+}
