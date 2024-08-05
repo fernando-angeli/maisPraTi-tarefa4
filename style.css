@@ -181,3 +181,35 @@ a.nav-link.contato-link:hover {
   color: #fff;
   -webkit-text-stroke: 1px var(--color-cinza);
 }
+
+/* About */
+#about {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 10vw;
+  padding-top: 200px;
+  border: 1px solid #fff;
+}
+
+.about-title {
+  font-weight: bold;
+  border-bottom: 1px solid;
+  padding-top: 5vh;
+}
+
+.about-text {
+  padding-top: 1rem;
+  font-size: 2rem;
+}
+
+.glassmorphism {
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 15px;
+  border: transparent;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+}
