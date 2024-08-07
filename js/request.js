@@ -8,18 +8,6 @@ const pages = {
 function request(url) {
   document.getElementById("content").innerHTML = "";
 
-  // const loaderModel = `<div class="d-flex justify-content-center align-itens-center">
-  //   <div class="spinner-border" role="status">
-  //     <span class="visually-hidden"></span>
-  //   </div>
-  // </div>`;
-
-  // if (!document.getElementById("loading")) {
-  //   const loader = document.createElement("div");
-  //   loader.innerHTML = loaderModel;
-  //   document.getElementById("content").appendChild(loader);
-  // }
-
   let ajax = new XMLHttpRequest();
 
   ajax.open("GET", pages[url]);
