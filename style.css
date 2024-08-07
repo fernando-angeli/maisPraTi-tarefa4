@@ -25,6 +25,7 @@ header {
   position: fixed;
   width: 100vw;
   z-index: 1;
+  margin-bottom: 5.6rem;
 }
 
 .contato-link {
@@ -97,14 +98,18 @@ a.nav-link.contato-link:hover {
   z-index: 1;
 }
 
-.section {
+/* Sections conteudo */
+
+.content-sections {
   height: 100vh;
+  padding-top: 6rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .box1,
 .box2 {
-  position: relative;
-  height: 100%;
   background-repeat: no-repeat;
   background-position: center;
   background-attachment: fixed;
@@ -124,11 +129,6 @@ a.nav-link.contato-link:hover {
       var(--color-verde-opaco)
     ),
     url(assets/img/box2.jpg);
-}
-
-.content-sections {
-  height: 100vh;
-  padding-top: 100px;
 }
 
 .text-home {
@@ -188,20 +188,18 @@ a.nav-link.contato-link:hover {
   align-items: center;
   justify-content: center;
   text-align: center;
-  padding: 10vw;
-  padding-top: 200px;
-  border: 1px solid #fff;
 }
 
 .about-title {
   font-weight: bold;
   border-bottom: 1px solid;
-  padding-top: 5vh;
+  margin: 2rem;
 }
 
 .about-text {
   padding-top: 1rem;
   font-size: 2rem;
+  padding: 2rem;
 }
 
 .glassmorphism {
@@ -212,4 +210,47 @@ a.nav-link.contato-link:hover {
   border: transparent;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   padding: 20px;
+}
+
+/* Carroceu pagina Vantagens */
+#advantages {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.carousel-item {
+  width: 100vw;
+  padding: 6rem 0;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: transparent;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.text-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.text-item h1 {
+  font-size: 3.5rem;
+  font-weight: bold;
+  font-size: 4rem;
+  color: var(--color-cinza);
+  -webkit-text-stroke: 1px var(--color-texto-secundario);
+}
+.text-item p {
+  font-size: 2rem;
+  font-weight: bold;
+  -webkit-text-stroke: 1px var(--color-texto-secundario);
+}
+
+.carousel-control-next-icon,
+.carousel-control-prev-icon {
+  height: 4rem;
+  width: 4rem;
 }
