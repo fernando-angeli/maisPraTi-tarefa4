@@ -19,6 +19,7 @@
   --color-azul: rgb(32, 178, 255); /* Azul Claro */
   --color-azul-opaco: rgb(32, 178, 255, 0.4); /* Azul Claro */
   --color-gradient: linear-gradient(135deg, #0af898, #20b2ff);
+  --color-menu-and-footer: rgb(43, 48, 53, 0.9);
 }
 
 header {
@@ -102,7 +103,7 @@ a.nav-link.contato-link:hover {
 
 .content-sections {
   height: 100vh;
-  padding-top: 6rem;
+  padding-top: 91px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -253,4 +254,70 @@ a.nav-link.contato-link:hover {
 .carousel-control-prev-icon {
   height: 4rem;
   width: 4rem;
+}
+
+/* Contato */
+#contact {
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+}
+
+.container-form {
+  padding: 2rem 5rem 0 5rem;
+  height: 100vh;
+  margin-right: 30rem;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: transparent;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+form {
+  width: 400px;
+}
+
+textarea {
+  max-height: 5rem !important;
+}
+
+/* Footer */
+
+footer {
+  width: 100vw;
+  background-color: var(--color-menu-and-footer);
+  height: 5rem;
+}
+
+.text-footer {
+  text-decoration: none;
+  list-style: none;
+  color: #fff;
+}
+
+label {
+  font-size: 1rem;
+}
+
+.bi-github {
+  color: var(--color-verde);
+}
+
+.bi-linkedin {
+  color: var(--color-azul);
+}
+
+.bi {
+  width: 1.5rem;
+  height: 1.5rem;
+  margin-left: 1rem;
+}
+
+/* Modal */
+.modal-content {
+  background-image: linear-gradient(
+    var(--color-azul-opaco),
+    var(--color-verde-opaco)
+  );
 }
