@@ -22,6 +22,7 @@
   --color-menu-and-footer: rgb(43, 48, 53, 0.9);
 }
 
+/* HEADER */
 header {
   position: fixed;
   width: 100vw;
@@ -99,7 +100,14 @@ a.nav-link.contato-link:hover {
   z-index: 1;
 }
 
-/* Sections conteudo */
+/* Responsividade HEADER*/
+@media (max-width: 600px) {
+  .logo-win {
+    height: 3rem;
+  }
+}
+
+/* GLOBAL SECTIONS */
 
 .content-sections {
   height: 100vh;
@@ -132,22 +140,20 @@ a.nav-link.contato-link:hover {
     url(assets/img/box2.jpg);
 }
 
-.text-home {
-  font-family: "Poppins", sans-serif;
-}
+/* HOME */
 
 #home {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  font-family: "Poppins", sans-serif;
 }
 
 #home > h1 {
   position: relative;
   font-size: 8rem;
   color: #fff;
-  margin-right: 10rem;
   -webkit-text-stroke: 0.2vw var(--color-cinza);
 }
 
@@ -181,14 +187,36 @@ a.nav-link.contato-link:hover {
   font-size: 4rem;
   color: #fff;
   -webkit-text-stroke: 1px var(--color-cinza);
+  text-align: center;
 }
 
-/* About */
+/* Responsividade Home*/
+@media (max-width: 1200px) {
+  #home > h1 {
+    font-size: 4rem;
+    margin-bottom: 4rem;
+  }
+  #home > h2 {
+    font-size: 3rem;
+  }
+}
+
+/* ABOUT */
 #about {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   text-align: center;
+  padding-left: 4rem;
+  padding-right: 4rem;
+}
+
+.about {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .about-title {
@@ -213,7 +241,19 @@ a.nav-link.contato-link:hover {
   padding: 20px;
 }
 
-/* Carroceu pagina Vantagens */
+/* Responsividade ABOUT */
+@media (max-width: 800px) {
+  #about {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  .about-text {
+    font-size: 1.2rem;
+    padding-top: 0.5rem;
+  }
+}
+
+/* ADVANTAGES */
 #advantages {
   display: flex;
   align-items: center;
@@ -235,6 +275,10 @@ a.nav-link.contato-link:hover {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-left: 5rem;
+  margin-right: 5rem;
+  text-align: center;
+  min-height: 25vh;
 }
 
 .text-item h1 {
@@ -256,16 +300,51 @@ a.nav-link.contato-link:hover {
   width: 4rem;
 }
 
-/* Contato */
+/* Responsividade ADVANTAGES */
+@media (max-width: 1200px) {
+  .text-item {
+    margin-left: 3rem;
+    margin-right: 3rem;
+  }
+  .text-item h1 {
+    font-size: 3rem;
+  }
+}
+@media (max-width: 1000px) {
+  .text-item h1 {
+    font-size: 2rem;
+  }
+  .text-item p {
+    font-size: 1.4rem;
+  }
+}
+@media (max-width: 600px) {
+  .carousel-control-next-icon,
+  .carousel-control-prev-icon {
+    height: 2rem;
+    width: 2rem;
+  }
+  .text-item h1 {
+    font-size: 1.5rem;
+  }
+  .text-item p {
+    font-size: 1.1rem;
+  }
+}
+
+/* CONTACT */
 #contact {
-  width: 100vw;
+  width: 100%;
   display: flex;
   flex-direction: column;
+  height: 100vh;
 }
 
 .container-form {
-  padding: 2rem 5rem 0 5rem;
-  height: 100vh;
+  position: absolute;
+  top: 91px;
+  height: calc(100vh - 91px);
+  padding: 2rem 5rem 2rem 5rem;
   margin-right: 30rem;
   background: rgba(255, 255, 255, 0.2);
   backdrop-filter: blur(10px);
@@ -279,15 +358,22 @@ form {
 }
 
 textarea {
-  max-height: 5rem !important;
+  max-height: 5rem;
 }
 
 /* Footer */
 
 footer {
-  width: 100vw;
+  width: 100%;
   background-color: var(--color-menu-and-footer);
   height: 5rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+  bottom: 0;
+  left: 0;
 }
 
 .text-footer {
@@ -320,4 +406,62 @@ label {
     var(--color-azul-opaco),
     var(--color-verde-opaco)
   );
+}
+
+/* Responsividade CONTACT FORM */
+@media (max-width: 1000px) {
+  .container-form {
+    margin: 0;
+    padding: 0;
+    height: calc(100vh - 170px);
+  }
+  #form-contact {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+@media (max-width: 800px) {
+  footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-wrap: nowrap;
+    font-size: 0.6rem;
+    height: 5rem;
+  }
+  #content-footer {
+    width: 100%;
+    text-align: center;
+  }
+  footer > ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 5px;
+  }
+}
+@media (max-width: 600px) {
+  #contact {
+    padding-top: 74px;
+    height: calc(100vh - 80px);
+  }
+  #form-contact {
+    width: 100vw;
+    padding: 0;
+  }
+  .form-item {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    width: 100vw;
+    margin-top: 0;
+  }
+  input {
+    height: 3rem;
+  }
+  #btn-send {
+    width: 100%;
+    height: 3rem;
+  }
 }
