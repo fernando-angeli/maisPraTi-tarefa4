@@ -87,17 +87,20 @@ a.nav-link {
     background-clip: text;
     color: transparent;
   }
+  a.nav-link.contato-link:hover {
+    border-bottom: 1.5px solid var(--color-verde);
+    width: 100%;
+  }
 }
 
 a.nav-link:hover {
   border-bottom: 1.5px solid var(--color-verde);
 }
 
-a.nav-link.contato-link:hover {
-  background: linear-gradient(45deg, var(--color-verde), var(--color-azul));
-  border: none;
-  transition: 400ms linear;
-  z-index: 1;
+@media (min-width: 992px) {
+  a.nav-link.contato-link:hover {
+    border: none;
+  }
 }
 
 /* Responsividade HEADER*/
@@ -463,5 +466,13 @@ label {
   #btn-send {
     width: 100%;
     height: 3rem;
+  }
+}
+@media (min-width: 801px) {
+  footer > ul {
+    display: flex;
+    justify-content: end;
+    align-items: end;
+    padding-right: 3rem;
   }
 }
